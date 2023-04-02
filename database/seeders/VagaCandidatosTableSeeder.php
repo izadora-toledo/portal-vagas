@@ -7,7 +7,7 @@ use App\Models\Vaga;
 use App\Models\Candidato;
 use App\Models\VagaCandidato;
 
-class VagasCandidatosTableSeeder extends Seeder
+class VagaCandidatosTableSeeder extends Seeder
 {
    /**
      * Run the database seeds.

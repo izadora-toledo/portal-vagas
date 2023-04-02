@@ -13,9 +13,9 @@ class CreateVagaCandidatosTable extends Migration
      */
     public function up()
     {
-        Schema::create('vagas_candidatos', function (Blueprint $table) {
+        Schema::create('vaga_candidatos', function (Blueprint $table) {
             $table->id();         
-            $table->timestamps();            
+            $table->timestamps();                     
         });
     }
 

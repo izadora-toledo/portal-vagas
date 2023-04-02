@@ -15,12 +15,12 @@ class CreateVagasTable extends Migration
     {
         Schema::create('vagas', function (Blueprint $table) {
             $table->id();
-            $table->string('titulo');
-            $table->text('descricao');
-            $table->enum('tipo_contratacao', ['CLT', 'Pessoa Jurídica', 'Freelancer']);
-            $table->decimal('salario', 10, 2);
-            $table->dateTime('data_criacao');
-            $table->dateTime('data_atualizacao')->nullable();
+            $table->string('titulo', 100);
+            $table->text('descricao',500);
+            $table->string('empresa',200);
+            $table->string('localizacao',200);
+            $table->enum('tipo_contratacao', ['Freelancer','CLT', 'PJ']);
+            $table->decimal('salario', 10, 2);     
             $table->enum('status', ['ativo', 'pausado', 'encerrado'])->default('ativo');
             $table->timestamps();
         });

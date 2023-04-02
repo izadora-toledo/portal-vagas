@@ -11,14 +11,16 @@ class AddForeignKeysToCandidatosTable extends Migration
      *
      * @return void
      */
+    /* Em caso de usar o comando: php artisan migrate:reset, deixar comentado o metodo dentro da função up e down e quando 
+      for usar: php artisan migrate é só remover o comentário */
     public function up()
     {
         Schema::table('candidatos', function (Blueprint $table) {
             $table->unsignedBigInteger('vaga_id');
-            $table->unsignedBigInteger('user_id');
-    
+            $table->unsignedBigInteger('user_id');     
+            
             $table->foreign('vaga_id')->references('id')->on('vagas');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users');             
         });
     }
 
@@ -31,9 +33,7 @@ class AddForeignKeysToCandidatosTable extends Migration
     {
         Schema::table('candidatos', function (Blueprint $table) {
             $table->dropForeign(['vaga_id']);
-            $table->dropForeign(['user_id']);
-    
-            $table->dropColumn(['vaga_id', 'user_id']);
+            $table->dropForeign(['user_id']);                        
         });
     }
 }

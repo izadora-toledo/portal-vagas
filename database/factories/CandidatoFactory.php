@@ -4,8 +4,6 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Candidato;
-use App\Models\User;
-use App\Models\Vaga;
 
 class CandidatoFactory extends Factory
 {

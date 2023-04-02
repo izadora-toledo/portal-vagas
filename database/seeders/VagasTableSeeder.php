@@ -19,9 +19,9 @@ class VagasTableSeeder extends Seeder
             'descricao' => 'Vaga para desenvolvedor web full stack',
             'empresa' => 'Empresa A',
             'localizacao' => 'São Paulo',
-            'tipo_contratacao' => 'CLT',
+            'tipo_contratacao' => 'Freelancer',
             'salario' => 5000.00,
-            'status' => 'aberta',
+            'status' => 'encerrado',
         ]);
 
         Vaga::create([
@@ -31,7 +31,7 @@ class VagasTableSeeder extends Seeder
             'localizacao' => 'Rio de Janeiro',
             'tipo_contratacao' => 'PJ',
             'salario' => 8000.00,
-            'status' => 'aberta',
+            'status' => 'ativo',
         ]);
 
         Vaga::create([
@@ -41,7 +41,7 @@ class VagasTableSeeder extends Seeder
             'localizacao' => 'Belo Horizonte',
             'tipo_contratacao' => 'CLT',
             'salario' => 4500.00,
-            'status' => 'aberta',
+            'status' => 'ativo',
         ]);
 
         Vaga::create([
@@ -50,10 +50,8 @@ class VagasTableSeeder extends Seeder
             'empresa' => 'Empresa ABC',
             'localizacao' => 'Rio de Janeiro',
             'tipo_contratacao' => 'CLT',
-            'salario' => 8000.00,
-            'data_criacao' => '2022-02-01',
-            'data_atualizacao' => '2022-02-01',
-            'status' => 'aberta',
+            'salario' => 8000.00,           
+            'status' => 'encerrado',
         ]);
 
         Vaga::create([
@@ -62,10 +60,8 @@ class VagasTableSeeder extends Seeder
             'empresa' => 'Empresa XYZ',
             'localizacao' => 'Belo Horizonte',
             'tipo_contratacao' => 'PJ',
-            'salario' => 6000.00,
-            'data_criacao' => '2022-03-01',
-            'data_atualizacao' => '2022-03-01',
-            'status' => 'aberta',
+            'salario' => 6000.00,         
+            'status' => 'pausado',
         ]);
     }
 }
