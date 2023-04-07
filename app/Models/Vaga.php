@@ -20,4 +20,10 @@ class Vaga extends Model
         'data_atualizacao',
         'status'
     ];
+
+    public function candidatos()
+{
+    return $this->hasMany(Candidato::class);
+}
+
 }

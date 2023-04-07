@@ -16,11 +16,9 @@ class AddForeignKeysToCandidatosTable extends Migration
     public function up()
     {
         Schema::table('candidatos', function (Blueprint $table) {
-            $table->unsignedBigInteger('vaga_id');
-            $table->unsignedBigInteger('user_id');     
-            
-            $table->foreign('vaga_id')->references('id')->on('vagas');
-            $table->foreign('user_id')->references('id')->on('users');             
+            $table->foreignId('vaga_id')->constrained()->onDelete('cascade');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');            
         });
     }
 
@@ -33,7 +31,9 @@ class AddForeignKeysToCandidatosTable extends Migration
     {
         Schema::table('candidatos', function (Blueprint $table) {
             $table->dropForeign(['vaga_id']);
-            $table->dropForeign(['user_id']);                        
+            $table->dropColumn('vaga_id');
+            $table->dropForeign(['user_id']);
+            $table->dropColumn('user_id');                     
         });
     }
 }

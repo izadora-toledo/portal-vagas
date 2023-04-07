@@ -18,7 +18,7 @@ class CreateCandidatosTable extends Migration
             $table->string('nome',100);
             $table->string('email',100);
             $table->string('telefone',30);
-            $table->text('experiencia',500);            
+            $table->text('experiencia',500);                        
             $table->timestamps();       
         });
     }

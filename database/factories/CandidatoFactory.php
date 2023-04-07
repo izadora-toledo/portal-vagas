@@ -16,7 +16,7 @@ class CandidatoFactory extends Factory
             'email' => $this->faker->unique()->safeEmail,
             'telefone' => $this->faker->phoneNumber,
             'experiencia' => $this->faker->paragraph,
-            'vaga_id' => rand(1, 5),
+            'vaga_id' => rand(1, 20),
             'user_id' => rand(1, 10),
         ];
     }

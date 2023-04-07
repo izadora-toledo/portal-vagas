@@ -4,9 +4,17 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
+use App\Models\User;
 
 class UserFactory extends Factory
 {
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = User::class;
+
     /**
      * Define the model's default state.
      *
@@ -34,6 +42,27 @@ class UserFactory extends Factory
             return [
                 'email_verified_at' => null,
             ];
+        });
+    }
+
+    /**
+     * Indicate that the first user created should be the admin.
+     *
+     * @return \Illuminate\Database\Eloquent\Factories\Factory
+     */
+    public function configure()
+    {
+        return $this->afterCreating(function (User $user) {
+            static $counter = 0;
+
+            $counter++;
+
+            if ($counter === 1) {
+                $user->id = 1;
+                $user->name = 'admin';
+                $user->email = 'admin@gmail.com';
+                $user->save();
+            }
         });
     }
 }

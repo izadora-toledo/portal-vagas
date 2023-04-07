@@ -16,7 +16,7 @@ class VagaFactory extends Factory
             'descricao' => $this->faker->text(200),
             'empresa' => $this->faker->company,
             'localizacao' => $this->faker->city,
-            'tipo_contratacao' => $this->faker->randomElement(['Estágio', 'PJ', 'CLT']),
+            'tipo_contratacao' => $this->faker->randomElement(['Freelancer', 'PJ', 'CLT']),
             'salario' => $this->faker->randomFloat(2, 1000, 10000),          
             'status' => $this->faker->boolean(80),
         ];
