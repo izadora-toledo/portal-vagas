@@ -130,6 +130,8 @@ Pronto, Laravel 8.0 instalado com sucesso.
 
 <h1>EXECUTANDO O PROJETO</h1>
 
+<h5>OBS: O projeto infelizmente ficou incompleto por eu ter pouco tempo por causa do meu trabalho na semana, mas me esforcei e fiz o máximo que deu. O projeto não vai ter os candidatos, existe a tabela com eles e etc, mas não tem a lista e o crud deles. Somente o crud de vagas com todas as funcionalidades solicitadas e devidas restrições. </h5>
+
 * Abra o sistema de controle do Xampp e clique em Admin que se refere ao MySQL
 * Ele vai abrir o phpMyAdmin no seu navegador, clique em Novo no menu lateral a esquerda e crie um banco de dados com o nome laravel e a configuração do utf8 exatamente como está abaixo:
 
