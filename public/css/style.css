@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+body {
+  font-family:Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+}
+
+/* LOGO */
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+/* Título */
+.titulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 120px;
+    color: #FF1493;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+}
+
+/* Subtitulo */
+.subtitulo {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 80px;
+    color: #4682B4;
+    text-align: center;
+    margin-right: 20%; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+p.descricao {    
+    font-size: 24px;
+    line-height: 1.5;
+    color: #333;
+    margin-top: 80px;
+  }
+
+.menu {
+    color: #FF1493;
+    text-decoration: none;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid #FF1493;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.btn-primary {
+    background-color: #FF1493;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;  
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+}
+      
+.btn-primary:hover {
+    background-color: #aeafb1;
+    cursor: pointer;
+}
+
+.btn-default {
+    background-color: #4682B4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;  
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+}
+      
+.btn-default:hover {
+    background-color: #aeafb1;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+#salvar {
+    font-size: 16px;
+    color: 	#32CD32 !important;
+}
+
+.nav-menu {
+font-size: 18px;
+color: rgb(152, 152, 152) !important;
+}
+  
+  
+  
+  
+  

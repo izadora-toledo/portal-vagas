@@ -13,7 +13,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->make('App\Http\Controllers\UserController');
     }
 
     /**

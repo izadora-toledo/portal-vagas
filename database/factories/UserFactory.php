@@ -61,6 +61,7 @@ class UserFactory extends Factory
                 $user->id = 1;
                 $user->name = 'admin';
                 $user->email = 'admin@gmail.com';
+                $user->password = '12345678';
                 $user->save();
             }
         });

@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Vaga;
 use App\Models\Candidato;
+use App\Models\Vaga;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Facades\DB;
 
 class VagaController extends Controller
 {
-   
     public function index(Request $request)
     {
         $vagas = Vaga::query();
@@ -18,7 +17,7 @@ class VagaController extends Controller
         // Filtragem
         if ($request->has('filtro')) {
             $filtro = $request->input('filtro');
-            $vagas->where(function($query) use ($filtro) {
+            $vagas->where(function ($query) use ($filtro) {
                 $query->where('titulo', 'like', '%' . $filtro . '%')
                     ->orWhere('empresa', 'like', '%' . $filtro . '%')
                     ->orWhere('localizacao', 'like', '%' . $filtro . '%')
@@ -43,6 +42,7 @@ class VagaController extends Controller
     {
         $vaga = new Vaga();
         $ja_candidatou = false;
+
         return view('vagas.create', compact('vaga', 'ja_candidatou'));
     }
 
@@ -54,16 +54,18 @@ class VagaController extends Controller
 
         return redirect()->route('vagas.index')->with('success', 'Vaga criada com sucesso!');
     }
-
-        public function show(Vaga $vaga)
+    
+    public function show(Vaga $vaga)
     {
         $ja_candidatou = $vaga->candidatos()->where('user_id', auth()->user()->id)->exists();
+
         return view('vagas.show', compact('vaga', 'ja_candidatou'));
     }
 
-    public function edit($id)
+    public function edit($vaga)
     {
-        $vaga = Vaga::findOrFail($id);
+        $vaga = Vaga::findOrFail($vaga);
+
         return view('vagas.create', compact('vaga'));
     }
 
@@ -75,63 +77,35 @@ class VagaController extends Controller
         return redirect()->route('vagas.index')->with('success', 'Vaga atualizada com sucesso!');
     }
 
-    public function destroy(Vaga $vaga)
+    public function destroy($id)
     {
-        // Exclui todos os registros relacionados na tabela vaga_candidatos
-        $vaga->candidatos()->detach();
-        
-        // Exclui a vaga em si
+        $vaga = Vaga::findOrFail($id);
+
+        // Remove candidatos vinculados a essa vaga, caso haja
+        DB::table('vaga_candidatos')->where('vaga_id', $vaga->id)->delete();
+
+        // Deleta a vaga da tabela tbvagas
         $vaga->delete();
-    
-        return redirect('/vagas')->with('success', 'Vaga excluída com sucesso!');
+
+        return redirect()->route('vagas.index')->with('success', 'Vaga excluída com sucesso!');
     }
-    
-    
 
-    public function pausar($id)
-{
-    $vaga = Vaga::find($id);
-    $vaga->status = 'pausado';
-    $vaga->save();
-
-    return redirect()->back();
-}
-
-public function ativar($id)
-{
-    $vaga = Vaga::find($id);
-    $vaga->status = 'ativo';
-    $vaga->save();
-
-    return redirect()->back();
-}
-
-    
-
-
-    public function toggleCandidatura(Vaga $vaga)
+    public function pausar($vaga)
     {
-        if (!Auth::check()) {
-            return redirect()->route('login');
-        }
+        $vaga = Vaga::find($vaga);
+        $vaga->status = 'pausado';
+        $vaga->save();
 
-        $user = Auth::user();
-        $candidato = $vaga->candidatos()->where('user_id', $user->id)->first();
+        return redirect()->back();
+    }
 
-        if ($candidato) {
-            $candidato->delete();
-        } else {
-            $candidato = new Candidato();
-            $candidato->user_id = $user->id;
-            $candidato->vaga_id = $vaga->id;
-            $candidato->save();
-        }
+    public function ativar($vaga)
+    {
+        $vaga = Vaga::find($vaga);
+        $vaga->status = 'ativo';
+        $vaga->save();
 
-        return back();
-    }   
-
-
-
-
+        return redirect()->back();
+    }
 
 }
