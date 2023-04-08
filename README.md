@@ -7,11 +7,11 @@ Este é um projeto em PHP desenvolvido utilizando Laravel 8.0.
 <h3>Pré-requisitos</h3>
 Antes de começar, é necessário ter instalado em sua máquina:
 
-XAMPP versão 8.2 ou superior
-PHP 8.2 obrigatório
-Composer 2.5 ou superior
-MySQL (ele será instalado junto com o xampp, é só manter as configurações de instalação do xampp padrão)
-Visual Studio Code
+XAMPP versão 8.2 ou superior <br>
+PHP 8.2 obrigatório <br>
+Composer 2.5 ou superior <br>
+MySQL (ele será instalado junto com o xampp, é só manter as configurações de instalação do xampp padrão) <br>
+Visual Studio Code <br>
 Git
 
 <h4>Instalando o Visual Studio Code</h4>
@@ -74,7 +74,7 @@ git clone https://github.com/izadora-toledo/portal-vagas.git
 * Depois de clonar o projeto do Git, você precisará instalar as dependências do projeto usando o Composer. Para fazer isso, siga estes passos:
 
 * Abra o prompt de comando e ou terminal e execute esse comando:
-cd C:\xampp\htdocs\portal-vagas\portal
+cd C:\xampp\htdocs\portal-vagas
 
 * Verifique se o Composer está instalado em sua máquina digitando composer -v.
 
@@ -141,12 +141,12 @@ Pronto, Laravel 8.0 instalado com sucesso.
 nome da base de dados: laravel<br>
 codificação: utf8mb4_unicode_ci
 
-* No prompt de comando dentro da pasta raiz do projeto (C:\xampp\htdocs\portal-vagas\portal), execute o comando responsável por abrir o vscode:
+* No prompt de comando dentro da pasta raiz do projeto (C:\xampp\htdocs\portal-vagas), execute o comando responsável por abrir o vscode:
 code .
 
-* Na pasta portal crie um arquivo com o nome: .env
+* Na pasta portal-vagas crie um arquivo com o nome: .env
 
-* Procure na pasta portal o arquivo .env.example e copie tudo que tem nele, pro arquivo que você criou .env
+* Procure na pasta portal-vagas o arquivo .env.example e copie tudo que tem nele, pro arquivo que você criou .env
 
 * Abra o terminal do vscode e execute o comando:
 php artisan migrate
@@ -155,6 +155,9 @@ php artisan migrate
 php artisan db:seed
 
 * Atualize o seu navegador onde criou o banco de dados com o nome de laravel, clique em cima dele e veja se as tabelas e registros foram criados.
+
+* Execute esse comando para gerar uma nova chave de criptografia que a armazenará no arquivo .env:
+php artisan key:generate
 
 * Após isso, vamos iniciar o servidor, execute:
 php artisan serve
