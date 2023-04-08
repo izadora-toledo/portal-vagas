@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # portal-vagas
 
 <h1>Projeto PORTAL DE VAGAS</h1>
@@ -173,6 +173,6 @@ Os testes se encontram na pasta tests
 Não poderemos rodar os testes, pois eu tive alguns problemas de incompatibildiade durante a semana e não consegui resolver a tempo, mas criei dois TesteUser.php na pasta tests/unit e outro na pasta tests/features com o nome de TesteCriacaoVagaTest.php.
 
 <h4>RODANDO DOCKER</h4>
-Não consegui colocar o laradock pra funcionar, então decidi por não instalar, mesmo tentando usar o ambiente linux, o meu pc ficou muito lento e travando, aí preferi fazer sem.
+Não consegui colocar o laradock pra funcionar, então decidi por não instalar, mesmo tentando usar o ambiente linux, o meu pc ficou muito lento e travando, aí preferi fazer sem. Mas gostaria de esclarecer que quero muito aprender as coisas que ainda são novas pra mim.
 
 <h5>Agradeço pela oportunidade, tenho muito a melhorar, mas quero dizer que informei na entrevista que estou estudando laravel e docker agora, então foi algo novo pra mim e eu tive minhas dificuldades e a falta de tempo porque eu trabalho durante a semana. Mas foi uma excelente experiência e eu adoraria aprender mais coisas com vocês e melhorar tudo que já sei :)</h5>
