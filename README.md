@@ -90,9 +90,8 @@ composer update
 <h4>Instalando o Composer (é necessário ter instalado o php junto com o xampp)</h4>
 
 * Crie uma pasta com o nome portal-vagas dentro desse diretório do xampp C:\xampp\htdocs
-* Dentro da pasta portal-vagas crie outra pasta com o nome portal
 * Abra o prompt de comando do Windows.
-* Navegue até o diretório esse diretório: C:\xampp\htdocs\portal-vagas\portal
+* Navegue até o diretório esse diretório: C:\xampp\htdocs\portal-vagas
 * Execute o seguinte comando:
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 
@@ -125,9 +124,9 @@ Pronto, PHP 8.2 atualizado com sucesso.
 <h4>Instalação do Laravel 8.0</h4>
 Para instalar o Laravel 8.0, siga os seguintes passos:
 
-* Abra o terminal ou prompt de comando e navegue até o diretório raiz do projeto (C:\xampp\htdocs\portal-vagas\portal).
+* Abra o terminal ou prompt de comando e navegue até o diretório raiz do projeto (C:\xampp\htdocs\portal-vagas).
 * Execute o seguinte comando para instalar o Laravel:
-composer create-project --prefer-dist laravel/laravel:^8.0 portal
+composer create-project --prefer-dist laravel/laravel:^8.0 portal-vagas
 
 Pronto, Laravel 8.0 instalado com sucesso.
 
@@ -162,6 +161,8 @@ php artisan key:generate
 * Após isso, vamos iniciar o servidor, execute:
 php artisan serve
 
+<h5>OBS: Caso tenha executado algo errado ou fora de ordem, vá no banco de dados e exclua o banco laravel que você criou, exclua e crie outro com o mesmo nome e execute os passos novamente os passos acima.</h5>
+
 * Para acessar o projeto copie no seu navegador essa URL: http://localhost:8000/welcome
 
 * Para acessar o usuário admin, use:
@@ -173,7 +174,7 @@ senha: 12345678
 
 <h4>RODANDO TESTES</h4>
 Os testes se encontram na pasta tests
-Não poderemos rodar os testes, pois eu tive alguns problemas de incompatibildiade durante a semana e não consegui resolver a tempo, mas criei dois TesteUser.php na pasta tests/unit e outro na pasta tests/features com o nome de TesteCriacaoVagaTest.php.
+Não poderemos rodar os testes, pois eu tive alguns problemas de incompatibildiade durante a semana e não consegui resolver a tempo, mas criei dois TesteUser.php na pasta tests/unit e outro na pasta tests/features com o nome de TesteCriacaoVagaTest.php. Eu cheguei a conseguir rodar eles, mas quando fui 'testar' em outra máquina, deu alguns problemas com o phpunit e aí acabei deixando assim sem conseguir rodar.
 
 <h4>RODANDO DOCKER</h4>
 Não consegui colocar o laradock pra funcionar, então decidi por não instalar, mesmo tentando usar o ambiente linux, o meu pc ficou muito lento e travando, aí preferi fazer sem. Mas gostaria de esclarecer que quero muito aprender as coisas que ainda são novas pra mim.
