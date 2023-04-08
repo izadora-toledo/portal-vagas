@@ -9,6 +9,7 @@ PHP 8.2 obrigatório
 Composer 2.5 ou superior
 MySQL (ele será instalado junto com o xampp, é só manter as configurações de instalação do xampp padrão)
 Visual Studio Code
+Git
 
 <h4>Instalando o Visual Studio Code</h4>
 
@@ -17,6 +18,13 @@ Visual Studio Code
 * O download deve iniciar automaticamente. Caso contrário, clique em "Download for Windows".
 * Após o download, execute o instalador do Visual Studio Code (arquivo com extensão .exe)
 * Faça a instalação dele normalmente.
+
+<h4>Instalando o Git</h4>
+
+* Baixe o instalador do Git em https://git-scm.com/download/win.
+* Execute o instalador baixado.
+* Siga as instruções na tela para instalar o Git com as configurações padrão.
+* Quando a instalação estiver concluída, abra o cmd e verifique se o Git está instalado digitando "git --version" no prompt de comando. Se a instalação foi bem-sucedida, você verá a versão do Git instalada.
 
 <h4>Instalação do XAMPP</h4>
 Para instalar o XAMPP, siga os seguintes passos:
