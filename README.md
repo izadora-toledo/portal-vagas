@@ -53,6 +53,9 @@ DB_PASSWORD=
 <h4>Clonando o Projeto Portal de Vagas do meu git para a sua máquina, siga o passo a passo:</h4>
 
 * Abra o prompt de comando e execute o seguinte comando:
+cd C:\xampp\htdocs
+
+* Depois execute:
 git clone https://github.com/izadora-toledo/portal-vagas.git
 
 * Aguarde até que o processo de clonagem seja concluído.
