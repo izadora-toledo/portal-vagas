@@ -135,7 +135,7 @@ Pronto, Laravel 8.0 instalado com sucesso.
 * Abra o sistema de controle do Xampp e clique em Admin que se refere ao MySQL
 * Ele vai abrir o phpMyAdmin no seu navegador, clique em Novo no menu lateral a esquerda e crie um banco de dados com o nome laravel e a configuração do utf8 exatamente como está abaixo:
 
-nome da base de dados: laravel
+nome da base de dados: laravel<br>
 codificação: utf8mb4_unicode_ci
 
 * No prompt de comando dentro da pasta raiz do projeto (C:\xampp\htdocs\portal-vagas\portal), execute o comando responsável por abrir o vscode:
