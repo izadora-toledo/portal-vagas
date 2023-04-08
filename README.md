@@ -141,6 +141,10 @@ codificação: utf8mb4_unicode_ci
 * No prompt de comando dentro da pasta raiz do projeto (C:\xampp\htdocs\portal-vagas\portal), execute o comando responsável por abrir o vscode:
 code .
 
+* Na pasta portal crie um arquivo com o nome: .env
+
+* Procure na pasta portal o arquivo .env.example e copie tudo que tem nele, pro arquivo que você criou .env
+
 * Abra o terminal do vscode e execute o comando:
 php artisan migrate
 
