@@ -5,6 +5,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VagaController;
 
+Route::get('/', function () {
+    return view('home.welcome');
+});
+
 // Rota padrão
 Route::get('/welcome', function () {
     return view('home.welcome');
