@@ -71,7 +71,7 @@ git clone https://github.com/izadora-toledo/portal-vagas.git
 * Depois de clonar o projeto do Git, você precisará instalar as dependências do projeto usando o Composer. Para fazer isso, siga estes passos:
 
 * Abra o prompt de comando e ou terminal e execute esse comando:
-C:\xampp\htdocs\portal-vagas\portal
+cd C:\xampp\htdocs\portal-vagas\portal
 
 * Verifique se o Composer está instalado em sua máquina digitando composer -v.
 
