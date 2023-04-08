@@ -8,6 +8,15 @@ XAMPP versão 8.2 ou superior
 PHP 8.2 obrigatório
 Composer 2.5 ou superior
 MySQL (ele será instalado junto com o xampp, é só manter as configurações de instalação do xampp padrão)
+Visual Studio Code
+
+<h4>Instalando o Visual Studio Code</h4>
+
+* Acesse o site oficial do Visual Studio Code em https://code.visualstudio.com/.
+* Clique no botão "Download" na página inicial.
+* O download deve iniciar automaticamente. Caso contrário, clique em "Download for Windows".
+* Após o download, execute o instalador do Visual Studio Code (arquivo com extensão .exe)
+* Faça a instalação dele normalmente.
 
 <h4>Instalação do XAMPP</h4>
 Para instalar o XAMPP, siga os seguintes passos:
