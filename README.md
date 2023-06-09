@@ -178,5 +178,3 @@ Não poderemos rodar os testes, pois eu tive alguns problemas de incompatibildia
 
 <h4>RODANDO DOCKER</h4>
 Não consegui colocar o laradock pra funcionar, então decidi por não instalar, mesmo tentando usar o ambiente linux, o meu pc ficou muito lento e travando, aí preferi fazer sem. Mas gostaria de esclarecer que quero muito aprender as coisas que ainda são novas pra mim.
-
-<h5>Agradeço pela oportunidade, tenho muito a melhorar, mas quero dizer que informei na entrevista que estou estudando laravel e docker agora, então foi algo novo pra mim e eu tive minhas dificuldades e a falta de tempo porque eu trabalho durante a semana. Mas foi uma excelente experiência e eu adoraria aprender mais coisas com vocês e melhorar tudo que já sei :)</h5>
